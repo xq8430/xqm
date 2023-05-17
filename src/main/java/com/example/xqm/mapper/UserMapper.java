@@ -1,10 +1,10 @@
 package com.example.xqm.mapper;
 
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.example.xqm.dto.User;
 
-@Repository
+@Mapper
 public interface UserMapper {
 	
     public User getUser(String userName,String password);
