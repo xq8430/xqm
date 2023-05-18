@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?characterEncoding=utf-8&useSSL=false
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: com.example.xqm.dto
