@@ -7,6 +7,6 @@ import com.example.xqm.dto.User;
 @Mapper
 public interface UserMapper {
 	
-    public User getUser(String userName,String password);
+    public User getUser(String name,String password);
 
 }

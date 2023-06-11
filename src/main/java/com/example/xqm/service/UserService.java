@@ -15,7 +15,7 @@ public class UserService {
 	
 	public String getUser(User user) {
 		
-		User DBuser = userMapper.getUser(user.getUserName(),user.getPassword());
+		User DBuser = userMapper.getUser(user.getName(),user.getPassword());
 		
 		if(DBuser == null) {
 			return "error";
