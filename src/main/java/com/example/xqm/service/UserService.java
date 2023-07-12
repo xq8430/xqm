@@ -1,22 +1,22 @@
 package com.example.xqm.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.example.xqm.dao.UserDao;
 import com.example.xqm.dto.User;
-import com.example.xqm.mapper.UserMapper;
 
 @Service
 public class UserService {
 
 	@Autowired
-	private UserMapper userMapper;
+	private UserDao userDao;
 	
 	
 	public String getUser(User user) {
 		
-		User DBuser = userMapper.getUser(user.getName(),user.getPassword());
-		
+		List<User> DBuser = userDao.selectUser(null);
 		if(DBuser == null) {
 			return "error";
 		}else {
