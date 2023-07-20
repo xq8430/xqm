@@ -14,13 +14,13 @@ public class UserService {
 	private UserDao userDao;
 	
 	
-	public String getUser(User user) {
+	public User getUser(User user) {
 		
 		List<User> DBuser = userDao.selectUser(null);
 		if(DBuser == null) {
-			return "error";
+			return null;
 		}else {
-			return "OK";
+			return DBuser.get(0);
 		}
 	}
 }

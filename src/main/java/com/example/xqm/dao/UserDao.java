@@ -24,9 +24,13 @@ public class UserDao {
         List<User> userList = new ArrayList<User>();
         
         for(Map<String, Object> map: mapList) {
-        	map.forEach((k,v) ->{
-        		userList.add((User) v);
-        	});
+    		User user = new User();
+    		user.setUserid((int) map.get("userid"));
+    		user.setName((String) map.get("name"));
+    		user.setPassword((String) map.get("password"));
+    		user.setEmail((String) map.get("email"));
+    		user.setCity((String) map.get("city"));
+    		userList.add(user);
         }
         return userList;
     }

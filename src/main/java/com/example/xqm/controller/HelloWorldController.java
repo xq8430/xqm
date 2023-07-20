@@ -16,7 +16,7 @@ public class HelloWorldController {
 	private UserService service;
 	
 	@PostMapping("/hello")
-    public String hello(User user) {
+    public User hello(User user) {
     	
     	return service.getUser(user);
         
